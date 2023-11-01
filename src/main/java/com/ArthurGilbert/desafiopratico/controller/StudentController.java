@@ -21,16 +21,18 @@ import java.util.stream.Collectors;
 @Tag(name = "Students Controller", description = "API Rest for managing students.")
 public record StudentController(StudentService studentService) {
 
-    //@GetMapping
-    //@Operation(summary = "Get all students", description = "Retrieve a list of all registered students")
-    //@ApiResponses(value = {
-     //       @ApiResponse(responseCode = "200", description = "Operation successful")
-    //})
-    //public ResponseEntity<List<Student>> findAll() {
-     //   var students = studentService.findAll();
-       // var studentsAll = students.stream().map(studentsAll::new).collect(Collectors.toList());
-       // return ResponseEntity.ok(studentsAll);
-    //}
+    @GetMapping
+    @Operation(summary = "Get all students", description = "Retrieve a list of all registered students")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Operation successful")
+    }
+    )
+    public ResponseEntity<List<StudentDto>> findAll() {
+        var students = studentService.findAll();
+        var studentsDto = students.stream().map(StudentDto::new).collect(Collectors.toList());
+        return ResponseEntity.ok(studentsDto);
+    }
+
     @GetMapping("/{id}")
     @Operation(summary = "Get a student by ID", description = "Retrieve a specific student based on its ID")
     @ApiResponses(value = {

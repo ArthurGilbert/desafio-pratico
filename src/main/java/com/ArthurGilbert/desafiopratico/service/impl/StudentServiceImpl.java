@@ -46,9 +46,9 @@ public class StudentServiceImpl implements StudentService {
         dbStudent.setName(studentToUpdate.getName());
         dbStudent.setTeachersName(studentToUpdate.getTeachersName());
         dbStudent.setAge(studentToUpdate.getAge());
-        //dbStudent.setfirstSemesterGrade(studentToUpdate.getfirstSemesterGrade());
-        //dbStudent.setsecondSemesterGrade(studentToUpdate.getsecondSemesterGrade());
-       // dbStudent.setroomNumber(studentToUpdate.getroomNumber());
+        dbStudent.setfirstSemesterGrade(studentToUpdate.getfirstSemesterGrade());
+        dbStudent.setsecondSemesterGrade(studentToUpdate.getsecondSemesterGrade());
+        dbStudent.setroomNumber(studentToUpdate.getroomNumber());
 
         return this.studentRepository.save(dbStudent);
     }

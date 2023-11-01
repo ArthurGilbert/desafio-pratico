@@ -34,19 +34,19 @@ public class Student {
         this.name = name;
     }
 
-    public Float getFirstSemesterGrade() {
+    public Float getfirstSemesterGrade() {
         return firstSemesterGrade;
     }
 
-    public void setFirstSemesterGrade(Float firstSemesterGrade) {
+    public void setfirstSemesterGrade(Float firstSemesterGrade) {
         this.firstSemesterGrade = firstSemesterGrade;
     }
 
-    public Float getSecondSemesterGrade() {
+    public Float getsecondSemesterGrade() {
         return secondSemesterGrade;
     }
 
-    public void setSecondSemesterGrade(Float secondSemesterGrade) {
+    public void setsecondSemesterGrade(Float secondSemesterGrade) {
         this.secondSemesterGrade = secondSemesterGrade;
     }
 
@@ -66,11 +66,11 @@ public class Student {
         this.age = age;
     }
 
-    public Integer getRoomNumber() {
+    public Integer getroomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(Integer roomNumber) {
+    public void setroomNumber(Integer roomNumber) {
         this.roomNumber = roomNumber;
     }
 }
