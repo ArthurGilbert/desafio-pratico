@@ -12,5 +12,6 @@ public class DesafioPraticoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DesafioPraticoApplication.class, args);
 	}
+	//teste
 
 }
